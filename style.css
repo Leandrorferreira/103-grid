@@ -1,38 +1,75 @@
 body{
     margin:0;
     display: grid;
-    grid-template-areas: 'header header header aside'
+    grid-template-areas: 'header header header header'
                          'navbar navbar navbar aside'
                          'section section section aside'
                          'footer footer footer footer';
-    grid-template-rows: 20vh 5vh 50vh 25vh;
+    grid-template-rows: 20vh 5vh 50vh 20vh;
+    grid-template-columns: 24vw 24vw 24vw 24.5vw;
     grid-gap:10px;
 }
 
 header{
     grid-area:header;
-    background-color: red;
-    
+    background-color: #fe017e; 
+    display: flex;
+    justify-content: center;   
+}
+
+header img{
+    height: 100%;
+    width: 100px;
+    border-radius: 100%;
 }
 
 nav{
     grid-area:navbar;
-    background-color: blue;
-    
+    background-color: blue;  
+    display: flex;
+    justify-content: space-around;  
+    align-items: center;
+}
+
+nav a{
+    color:white;
+    text-decoration: none;
+    font-size: 16pt;
+}
+
+a:hover{
+    color:rgb(156, 154, 154);
+    text-decoration: underline;
 }
 
 section{
     grid-area: section;
-    background-color: lawngreen;
-    
+    background-image: url("image/banner.jpg");   
+    background-size: cover;
 }
 
 aside{
     grid-area: aside;
     background-color: yellow;
+    text-align: justify;
+    padding: 0 10px;
+}
+
+aside h2, p{
+    font-family: 'Exo', sans-serif;
 }
 
 footer{
     grid-area: footer;
     background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer div{
+    width: 200px;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
 }
